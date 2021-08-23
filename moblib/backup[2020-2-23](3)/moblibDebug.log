@@ -1,0 +1,175 @@
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 1030 # Y: 0
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlFormat>
+  #> queue size: 1
+  #> X: 1030 # Y: 0
+  #> Width: 50 # Height: 50
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 524 # Y: 644
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 524 # Y: 678
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 490 # Y: 678
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 558 # Y: 678
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlFormat>
+  #> queue size: 2
+  #> X: 524 # Y: 644
+  #> Width: 32 # Height: 32
+
+==#==> created obj <mlFormat>
+  #> queue size: 3
+  #> X: 524 # Y: 678
+  #> Width: 32 # Height: 32
+
+==#==> created obj <mlFormat>
+  #> queue size: 4
+  #> X: 490 # Y: 678
+  #> Width: 32 # Height: 32
+
+==#==> created obj <mlFormat>
+  #> queue size: 5
+  #> X: 558 # Y: 678
+  #> Width: 32 # Height: 32
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 100 # Y: 100
+  #> size of trace: 5
+  #> trace delay: 3
+
+==#==> created obj <mlMovimentKeys>
+  #> position X: 100 # Y: 100
+  #> velocity: 2
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: -10 # Y: -10
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlMovimentTouch>
+  #> position X: -10 # Y: -10
+
+==#==> created obj <mlFormat>
+  #> queue size: 6
+  #> X: -10 # Y: -10
+  #> Width: 1 # Height: 1
+
+==#==> created obj <mlSheet>
+  #> cols: 32
+  #> rows: 32
+  #> width: 1024
+  #> height: 1024
+  #> totalCells: 1024
+  #> cell: width: 32 # height: 32
+  #> cellCenter: width: 16 # height: 16
+
+==#==> created obj <mlSheet>
+  #> cols: 12
+  #> rows: 8
+  #> width: 576
+  #> height: 384
+  #> totalCells: 96
+  #> cell: width: 48 # height: 48
+  #> cellCenter: width: 24 # height: 24
+
+==#==> created obj <mlAnimationInstance>
+  #> interval:  9
+  #> direction:  2
+  #> rangeOfCells:  3
+  #> flip:  -1
+  #> step:  1
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 100 # Y: 100
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlMoviment>
+  #> position X: 100 # Y: 100
+
+==#==> created obj <mlAnimation>
+  #> index:  1
+  #> start:  0
+  #> end:  2
+  #> jump:  0
+
+==#==> created obj <mlAnimation>
+  #> index:  13
+  #> start:  12
+  #> end:  14
+  #> jump:  0
+
+==#==> created obj <mlAnimation>
+  #> index:  25
+  #> start:  24
+  #> end:  26
+  #> jump:  0
+
+==#==> created obj <mlAnimation>
+  #> index:  37
+  #> start:  36
+  #> end:  38
+  #> jump:  0
+
+==#==> destructing obj <mlAnimation>
+
+==#==> destructing obj <mlAnimation>
+
+==#==> destructing obj <mlAnimation>
+
+==#==> destructing obj <mlAnimation>
+
+==#==> destructing obj <mlSheet>
+
+==#==> destructing obj <mlMoviment>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlSheet>
+
+==#==> destructing obj <mlFormat>
+
+==#==> destructing obj <mlMovimentTouch>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlMovimentKeys>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlFormat>
+
+==#==> destructing obj <mlFormat>
+
+==#==> destructing obj <mlFormat>
+
+==#==> destructing obj <mlFormat>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlMovimentInstance>
+
+==#==> destructing obj <mlFormat>
+
+==#==> destructing obj <mlMovimentInstance>
