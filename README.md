@@ -18,4 +18,4 @@ here I will address what will be the path I want to follow and what is the ideal
 
 Obs: The project is being rewritten from my old projects, I appreciate any critical feedback that helps me improve as well as existing bugs and ideas to improve.
 
-Obs: Anyone who wants to participate in the project will leave my discord here for us to talk: "ManiacoDoCafé#9401"
+Obs: Anyone who wants to participate in the project will leave my discord here for us to talk: "BomDia#9401"
