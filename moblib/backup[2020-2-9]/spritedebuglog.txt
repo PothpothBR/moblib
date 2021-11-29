@@ -1,0 +1,149 @@
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: 980 # Y: 0
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteFormat>
+  #> queue size: 1
+  #> X: 980 # Y: 0
+  #> Width: 100 # Height: 100
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: 800 # Y: 100
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteSheet>
+  #> cols: 12
+  #> rows: 8
+  #> width: 1152
+  #> height: 768
+  #> totalCells: 96
+  #> cell: width: 96 # height: 96
+  #> cellCenter: width: 48 # height: 48
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: 100 # Y: 100
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteMoviment>
+  #> position X: 100 # Y: 100
+
+==#==> created obj <SpriteAnimation>
+  #> index:  1
+  #> start:  0
+  #> end:  2
+  #> interval:  41
+  #> jump:  0
+  #> direction:  2
+  #> rangeOfCells:  3
+  #> flip:  -1
+  #> step:  1
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: 200 # Y: 200
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteMoviment>
+  #> position X: 200 # Y: 200
+
+==#==> created obj <SpriteSheet>
+  #> cols: 1
+  #> rows: 1
+  #> width: 100
+  #> height: 100
+  #> totalCells: 1
+  #> cell: width: 100 # height: 100
+  #> cellCenter: width: 50 # height: 50
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: 500 # Y: 500
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteMoviment>
+  #> position X: 500 # Y: 500
+
+==#==> created obj <SpriteSheet>
+  #> cols: 1
+  #> rows: 1
+  #> width: 100
+  #> height: 100
+  #> totalCells: 1
+  #> cell: width: 100 # height: 100
+  #> cellCenter: width: 50 # height: 50
+
+==#==> created obj <SpriteFormat>
+  #> queue size: 2
+  #> X: 200 # Y: 200
+  #> Width: 100 # Height: 100
+
+==#==> created obj <SpriteFormat>
+  #> queue size: 3
+  #> X: 500 # Y: 500
+  #> Width: 100 # Height: 100
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: 100 # Y: 100
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteMovimentKeys>
+  #> position X: 100 # Y: 100
+  #> velocity: 5
+
+==#==> created obj <SpriteMovimentStance>
+  #> position X: -10 # Y: -10
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <SpriteMovimentClick>
+  #> position X: -10 # Y: -10
+
+==#==> created obj <SpriteFormat>
+  #> queue size: 4
+  #> X: -10 # Y: -10
+  #> Width: 1 # Height: 1
+
+==#==> destructing obj <SpriteFormat>
+
+==#==> destructing obj <SpriteMovimentClick>
+
+==#==> destructing obj <SpriteMovimentStance>
+
+==#==> destructing obj <SpriteMovimentKeys>
+
+==#==> destructing obj <SpriteMovimentStance>
+
+==#==> destructing obj <SpriteFormat>
+
+==#==> destructing obj <SpriteFormat>
+
+==#==> destructing obj <SpriteSheet>
+
+==#==> destructing obj <SpriteMoviment>
+
+==#==> destructing obj <SpriteMovimentStance>
+
+==#==> destructing obj <SpriteSheet>
+
+==#==> destructing obj <SpriteMoviment>
+
+==#==> destructing obj <SpriteMovimentStance>
+
+==#==> destructing obj <SpriteAnimation>
+
+==#==> destructing obj <SpriteMoviment>
+
+==#==> destructing obj <SpriteMovimentStance>
+
+==#==> destructing obj <SpriteSheet>
+
+==#==> destructing obj <SpriteMovimentStance>
+
+==#==> destructing obj <SpriteFormat>
+
+==#==> destructing obj <SpriteMovimentStance>

@@ -23,7 +23,7 @@
 #include "sheet.h"
 #include "colision.h"
 #include "position.h"
- 
+
 typedef short int sint;
 
 namespace MOB_MOVIMENT {
@@ -191,12 +191,65 @@ void mob_run(KEYBOARD<T>* self, bool all = true) {
 
 }
 
-// metodo para movimentar
+// metodo para movimentar, com sistema de colizao auto implementado
 template <class T>
 void mob_run(KEYBOARD<T>* self, MOB_COLLISION::COLID* self_box, MOB_FORM* another_box, int obj_in_out, bool all = true) {
 	mob_reload_collision(self_box);
 	mob_run(self, all);
 	mob_collision(self_box, another_box, obj_in_out);
+}
+
+// metodo para movimentar, com sistema de colizao com multiplos objetos auto implementado
+template <class T>
+void mob_run(KEYBOARD<T>* self, MOB_COLLISION::COLID* self_box, MOB_FORM_CHAIN* list_box, int obj_in_out, bool all = true) {
+	mob_reload_collision(self_box);
+	mob_run(self, all);
+	mob_collision(self_box, list_box, obj_in_out);
+}
+
+// recarrega a colizao de um objeto colizor a partir da movimentacao de outro objeto
+template <class T>
+void mob_reload_colision_mirror(KEYBOARD<T>* self, MOB_COLLISION::COLID* self_box, bool all = true) {
+	if (self->UP && self->LEFT && all) {
+		self_box->trail.x = self_box->form.position->x + self->dirX[UP_LEFT] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[UP_LEFT] * self->vel;
+	}												   
+	else if (self->UP && self->RIGHT && all) {		   
+		self_box->trail.x = self_box->form.position->x + self->dirX[UP_RIGHT] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[UP_RIGHT] * self->vel;
+	}												   
+	else if (self->DOWN && self->LEFT && all) {		   
+		self_box->trail.x = self_box->form.position->x + self->dirX[DOWN_LEFT] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[DOWN_LEFT] * self->vel;
+	}												   
+	else if (self->DOWN && self->RIGHT && all) {	   
+		self_box->trail.x = self_box->form.position->x + self->dirX[DOWN_RIGHT] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[DOWN_RIGHT] * self->vel;
+	}												   
+	else if (self->DOWN) {							   
+		self_box->trail.x = self_box->form.position->x + self->dirX[DOWN] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[DOWN] * self->vel;
+	}												   
+	else if (self->RIGHT) {							   
+		self_box->trail.x = self_box->form.position->x + self->dirX[RIGHT] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[RIGHT] * self->vel;
+	}												  
+	else if (self->UP) {							   
+		self_box->trail.x = self_box->form.position->x + self->dirX[UP] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[UP] * self->vel;
+	}												   
+	else if (self->LEFT) {							   
+		self_box->trail.x = self_box->form.position->x + self->dirX[LEFT] * self->vel;
+		self_box->trail.y = self_box->form.position->y + self->dirY[LEFT] * self->vel;
+	}
+}
+
+template <class T>
+void mob_reload_colision_mirror(AUTO<T>* self, MOB_COLLISION::COLID* self_box) {
+	if (!self->stop) {
+		self_box->trail.x = self->vuX;
+		self_box->trail.y = self->vuY;
+	}
 }
 
 // metodo para modificar a velocidade

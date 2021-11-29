@@ -23,12 +23,12 @@
 	// por que ao tentar construir a classe com uma copia dela mesma "class[0] = class()" tudo oque nao for alocado localmente sera perdido
 #include "position.h" // finalizado!
 #include "timing.h" // finalizada!
-#include "thread.h" // semi finalizado!
+#include "thread.h" // semi finalizado?
 #include "sheet.h" // finalizada!
-#include "animation.h" //finalizada
+#include "animation.h" //finalizada!
 #include "moviment.h" // finalizada!
-#include "colision.h" // finalizada!
-#include "mapping.h" // finalizado!
+#include "colision.h" // finalizada?
+#include "mapping.h" // finalizado?
 	
 	// retorna o fps em milisegundos
 #define FPS_TO_SEC(fps) 1/fps

@@ -1,0 +1,62 @@
+
+==#==> created obj <mlObject>
+
+==#==> created obj <mlSheet>
+  #> cols: 12
+  #> rows: 8
+  #> width: 576
+  #> height: 576
+  #> totalCells: 96
+  #> cell: width: 48 # height: 72
+  #> cellCenter: width: 24 # height: 36
+
+==#==> created obj <mlAnimationInstance>
+  #> interval:  17
+  #> direction:  2
+  #> rangeOfCells:  3
+  #> step:  1
+
+==#==> created obj <mlAnimation>
+  #> index:  1
+  #> start:  0
+  #> end:  2
+  #> jump:  0
+  #> flip:  -1
+
+==#==> created obj <mlAnimation>
+  #> index:  13
+  #> start:  12
+  #> end:  14
+  #> jump:  0
+  #> flip:  -1
+
+==#==> created obj <mlAnimation>
+  #> index:  25
+  #> start:  24
+  #> end:  26
+  #> jump:  0
+  #> flip:  -1
+
+==#==> created obj <mlAnimation>
+  #> index:  37
+  #> start:  36
+  #> end:  38
+  #> jump:  0
+  #> flip:  -1
+
+==#==> created obj <mlMovimentInstance>
+  #> position X: 600 # Y: 600
+  #> size of trace: 0
+  #> trace delay: 0
+
+==#==> created obj <mlMovimentKeys>
+  #> position X: 600 # Y: 600
+  #> velocity: 8
+
+==#==> destructing obj <mlObject>
+
+==#==> destructing obj <mlSheet>
+
+==#==> destructing obj <mlMovimentKeys>
+
+==#==> destructing obj <mlMovimentInstance>
