@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Users\bruno\Google Drive\backups\moblib\lastest\timing.h(33,53): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\timing.h(35,51): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\timing.h(51,12): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\sheet.h(51,32): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\sheet.h(52,37): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+  Gerando código
+  Previous IPDB not found, fall back to full compilation.
+  All 137 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finalizada a geração de código
+  moblib.vcxproj -> C:\Users\bruno\source\repos\moblib\x64\Release\moblib.exe

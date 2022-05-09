@@ -1,0 +1,16 @@
+﻿  main.cpp
+C:\Users\bruno\Google Drive\backups\moblib\lastest\timing.h(33,53): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\timing.h(35,51): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\timing.h(51,12): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\sheet.h(51,32): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\moblib\lastest\sheet.h(52,37): warning C4244: '=': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\Google Drive\backups\sflib\lastest\display.h(60,26): warning C4018: '<': incompatibilidade de signed/unsigned
+C:\Users\bruno\Google Drive\backups\sflib\lastest\display.h(62,35): warning C4018: '<': incompatibilidade de signed/unsigned
+C:\Users\bruno\Google Drive\backups\sflib\lastest\display.h(87,37): warning C4018: '<': incompatibilidade de signed/unsigned
+C:\Users\bruno\Google Drive\backups\sflib\lastest\display.h(103,23): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\bruno\Google Drive\backups\sflib\lastest\display.h(109,19): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\bruno\Google Drive\backups\sflib\lastest\display.h(122,27): warning C4018: '<': incompatibilidade de signed/unsigned
+C:\Users\bruno\source\repos\moblib\moblib\main.cpp(49,56): warning C4305: 'argumento': truncamento de 'double' para 'float'
+C:\Users\bruno\source\repos\moblib\moblib\main.cpp(55,93): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+C:\Users\bruno\source\repos\moblib\moblib\main.cpp(55,70): warning C4244: 'argumento': conversão de 'float' para 'int', possível perda de dados
+  moblib.vcxproj -> C:\Users\bruno\source\repos\moblib\Debug\moblib.exe
