@@ -203,6 +203,150 @@ bool mob_collision(MOB_COLLISION::COLID* self, float other_object_x, float other
 	return colid;
 }
 
+// colisao avancada, sem gosth. Usando entrada de dados manual
+bool mob_collision_mirror(MOB_COLLISION::COLID* self, float other_object_x, float other_object_y, float other_object_width, float other_object_height, MOB_COLLISION::COLID* mirror, int obj_in_out) {
+	bool colid = false;
+
+
+	if (obj_in_out == MOB_COLLISION::INTERNAL) {
+		colid = false;
+		if (self->form.position->x <= other_object_x - 1) {
+			mirror->form.position->x = other_object_x - 1;
+			colid = true;
+		}
+		if (self->form.position->y <= other_object_y - 1) {
+			mirror->form.position->y = other_object_y - 1;
+			colid = true;
+		}
+		if (self->form.position->x + self->form.dimension->width >= other_object_x + other_object_width + 1) {
+			mirror->form.position->x = other_object_x + (other_object_width - self->form.dimension->width) + 1;
+			colid = true;
+		}
+		if (self->form.position->y + self->form.dimension->height >= other_object_y + other_object_height + 1) {
+			mirror->form.position->y = other_object_y + (other_object_height - self->form.dimension->height) + 1;
+			colid = true;
+		}
+
+	}
+
+	else if (obj_in_out == MOB_COLLISION::EXTERNAL) {
+		colid = true;
+
+		bool ghost_side[4] = { false, false, false, false };
+		if (self->trail.y + self->form.dimension->height <= other_object_y) { ghost_side[0] = true; }
+		if (self->trail.x >= other_object_x + other_object_width) { ghost_side[1] = true; }
+		if (self->trail.y >= other_object_y + other_object_height) { ghost_side[2] = true; }
+		if (self->trail.x + self->form.dimension->width <= other_object_x) { ghost_side[3] = true; }
+
+		bool side[4] = { false, false, false, false };
+		if (self->form.position->y + self->form.dimension->height <= other_object_y) { side[0] = true; }
+		if (self->form.position->x >= other_object_x + other_object_width) { side[1] = true; }
+		if (self->form.position->y >= other_object_y + other_object_height) { side[2] = true; }
+		if (self->form.position->x + self->form.dimension->width <= other_object_x) { side[3] = true; }
+
+		bool allside = side[0] + side[1] + side[2] + side[3];
+
+		if (ghost_side[0] && // cima
+			((side[2] && !side[3] && !side[1]) || // colizao em eixos
+				(!ghost_side[1] && !ghost_side[3] && (side[1] || side[3]) && !side[0] && !side[2]) || // colizao em intercessoes
+				!allside)) // colizao interna
+			mirror->form.position->y = other_object_y - self->form.dimension->height - 1; // reajuste da posição do objeto
+
+		else if (ghost_side[1] && // frente
+			((side[3] && !side[2] && !side[0]) ||
+				(!ghost_side[0] && !ghost_side[2] && (side[0] || side[2]) && !side[1] && !side[3]) ||
+				!allside))
+			mirror->form.position->x = other_object_x + other_object_width + 1;
+
+		else if (ghost_side[2] && // baixo 
+			((side[0] && !side[3] && !side[1]) ||
+				(!ghost_side[1] && !ghost_side[3] && (side[1] || side[3]) && !side[0] && !side[2]) ||
+				!allside))
+			mirror->form.position->y = other_object_y + other_object_height + 1;
+
+		else if (ghost_side[3] && // atras
+			((side[1] && !side[2] && !side[0]) ||
+				(!ghost_side[0] && !ghost_side[2] && (side[0] || side[2]) && !side[1] && !side[3]) ||
+				!allside))
+			mirror->form.position->x = other_object_x - self->form.dimension->width - 1;
+
+		else colid = false; // se nada ocorrer nao houve colizao
+	}
+	return colid;
+}
+
+// colisao avancada espelhada, sem gosth
+bool mob_collision_mirror(MOB_COLLISION::COLID* self, MOB_FORM* other_object, MOB_COLLISION::COLID *mirror, int obj_in_out) {
+	bool colid = false;
+
+
+	if (obj_in_out == MOB_COLLISION::INTERNAL) {
+		colid = false;
+		if (self->form.position->x <= other_object->position->x - 1) {
+			mirror->form.position->x = other_object->position->x - 1;
+			colid = true;
+		}
+		if (self->form.position->y <= other_object->position->y - 1) {
+			mirror->form.position->y = other_object->position->y - 1;
+			colid = true;
+		}
+		if (self->form.position->x + self->form.dimension->width >= other_object->position->x + other_object->dimension->width + 1) {
+			mirror->form.position->x = other_object->position->x + (other_object->dimension->width - self->form.dimension->width) + 1;
+			colid = true;
+		}
+		if (self->form.position->y + self->form.dimension->height >= other_object->position->y + other_object->dimension->height + 1) {
+			mirror->form.position->y = other_object->position->y + (other_object->dimension->height - self->form.dimension->height) + 1;
+			colid = true;
+		}
+
+	}
+
+	else if (obj_in_out == MOB_COLLISION::EXTERNAL) {
+		colid = true;
+
+		bool ghost_side[4] = { false, false, false, false };
+		if (self->trail.y + self->form.dimension->height <= other_object->position->y) { ghost_side[0] = true; }
+		if (self->trail.x >= other_object->position->x + other_object->dimension->width) { ghost_side[1] = true; }
+		if (self->trail.y >= other_object->position->y + other_object->dimension->height) { ghost_side[2] = true; }
+		if (self->trail.x + self->form.dimension->width <= other_object->position->x) { ghost_side[3] = true; }
+
+		bool side[4] = { false, false, false, false };
+		if (self->form.position->y + self->form.dimension->height <= other_object->position->y) { side[0] = true; }
+		if (self->form.position->x >= other_object->position->x + other_object->dimension->width) { side[1] = true; }
+		if (self->form.position->y >= other_object->position->y + other_object->dimension->height) { side[2] = true; }
+		if (self->form.position->x + self->form.dimension->width <= other_object->position->x) { side[3] = true; }
+
+		bool allside = side[0] + side[1] + side[2] + side[3];
+
+		if (ghost_side[0] && // cima
+			((side[2] && !side[3] && !side[1]) || // colizao em eixos
+				(!ghost_side[1] && !ghost_side[3] && (side[1] || side[3]) && !side[0] && !side[2]) || // colizao em intercessoes
+				!allside)) // colizao interna
+			mirror->form.position->y = other_object->position->y - self->form.dimension->height - 1; // reajuste da posição do objeto
+
+		else if (ghost_side[1] && // frente
+			((side[3] && !side[2] && !side[0]) ||
+				(!ghost_side[0] && !ghost_side[2] && (side[0] || side[2]) && !side[1] && !side[3]) ||
+				!allside))
+			mirror->form.position->x = other_object->position->x + other_object->dimension->width + 1;
+
+		else if (ghost_side[2] && // baixo 
+			((side[0] && !side[3] && !side[1]) ||
+				(!ghost_side[1] && !ghost_side[3] && (side[1] || side[3]) && !side[0] && !side[2]) ||
+				!allside))
+			mirror->form.position->y = other_object->position->y + other_object->dimension->height + 1;
+
+		else if (ghost_side[3] && // atras
+			((side[1] && !side[2] && !side[0]) ||
+				(!ghost_side[0] && !ghost_side[2] && (side[0] || side[2]) && !side[1] && !side[3]) ||
+				!allside))
+			mirror->form.position->x = other_object->position->x - self->form.dimension->width - 1;
+
+		else colid = false; // se nada ocorrer nao houve colizao
+	}
+	return colid;
+}
+
 //colisao avançada, sem gost, com suporte a uma lista encadeada de colisoes
 bool mob_collision(MOB_COLLISION::COLID* self, MOB_FORM_CHAIN* list, int obj_in_out) {
 	bool colided = false;

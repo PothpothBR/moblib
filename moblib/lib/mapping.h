@@ -242,7 +242,7 @@ MOB_FORM_CHAIN* mob_map_fit_rectangles(MOB_MAP* self)  {
 	return fit_header;
 }
 
-// o mapa nao desaloca a valiravel position, pois ele so usa ela a partir de outra classe
+// o mapa nao desaloca a variavel position, pois ele so usa ela a partir de outra classe
 class MOB_MAPPING {
 public:
 	int limiter_x = 0, limiter_y = 0, limiter_w = 0, limiter_h = 0;
