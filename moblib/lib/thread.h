@@ -23,6 +23,10 @@
 #include <cstdlib>
 
 // cria uma capsula que armazena uma classe, que ao ir para o canal, pode ser manipulado
+// mudar nome para capsule? refatora para ficar mais inteligente
+//  - [] - [] - [] -
+// blocos de codigo fracamente acoplados que sao executados linearmente e podem ser adicionado / removidos / alterado de posição ao longo da execução
+// ex: desenho de layers, se mudar a horde que são desenhados a sobreposição entre eles muda
 class MOB_THREAD {
 public:
 	//construtor

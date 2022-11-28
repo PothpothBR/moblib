@@ -43,21 +43,21 @@ namespace MOB_MOVIMENT {
 	
 	class POSITION_GHOST : public MOB_POSITION {
 	public:
-		float *trace_X, *trace_Y;
+		float *trace_x, *trace_y;
 		sint trace_size, trace_delay, trace_delay_count;
 
 		POSITION_GHOST(float x, float y, sint trace_size = 0, sint trace_delay = 0) : MOB_POSITION(x, y) {
 			if (trace_size) {
-				this->trace_X = (float *)calloc(trace_size, sizeof(float));
-				this->trace_Y = (float *)calloc(trace_size, sizeof(float));
-				for (int i = 0; i < trace_size;i++) { trace_X[i] = x, trace_Y[i] = y; }
+				this->trace_x = (float *)calloc(trace_size, sizeof(float));
+				this->trace_y = (float *)calloc(trace_size, sizeof(float));
+				for (int i = 0; i < trace_size;i++) { trace_x[i] = x, trace_y[i] = y; }
 			}
-			else { this->trace_X = nullptr, this->trace_Y = nullptr; }
+			else { this->trace_x = nullptr, this->trace_y = nullptr; }
 			this->trace_size = trace_size, this->trace_delay = trace_delay, this->trace_delay_count = trace_delay;
 		}
 	
 		~POSITION_GHOST() {
-			if (trace_X) free(trace_X); if (trace_Y) free(trace_Y);
+			if (trace_x) free(trace_x); if (trace_y) free(trace_y);
 		}
 	};
 
@@ -121,13 +121,13 @@ namespace MOB_MOVIMENT {
 
 using namespace MOB_MOVIMENT;
 
-float mob_get_moviment_trace_X(POSITION_GHOST* self, sint index) { if (index < self->trace_size) return self->trace_X[index];  return -100; }
-float mob_get_moviment_trace_Y(POSITION_GHOST* self, sint index) { if (index < self->trace_size) return self->trace_Y[index];  return -100; }
+float mob_get_moviment_trace_X(POSITION_GHOST* self, sint index) { if (index < self->trace_size) return self->trace_x[index];  return -100; }
+float mob_get_moviment_trace_Y(POSITION_GHOST* self, sint index) { if (index < self->trace_size) return self->trace_y[index];  return -100; }
 
 void mob_set_moviment_trace(POSITION_GHOST* self, float x, float y) {
 	if (self->trace_size <= 0) return;
-	for (sint i = self->trace_size - 1, i2 = self->trace_size - 2; i > 0; i--, i2--) { self->trace_X[i] = self->trace_X[i2], self->trace_Y[i] = self->trace_Y[i2]; }
-	self->trace_X[0] = x, self->trace_Y[0] = y;
+	for (sint i = self->trace_size - 1, i2 = self->trace_size - 2; i > 0; i--, i2--) { self->trace_x[i] = self->trace_x[i2], self->trace_y[i] = self->trace_y[i2]; }
+	self->trace_x[0] = x, self->trace_y[0] = y;
 }
 
 void mob_set_auto_trace_xy(POSITION_GHOST* self, float x, float y) {

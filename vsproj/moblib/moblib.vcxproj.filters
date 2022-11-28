@@ -26,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="mapa.txt">
       <Filter>Arquivos de Recurso</Filter>
     </Text>
@@ -64,5 +61,8 @@
     <ClInclude Include="..\..\..\graphic\lastest\graphic.h">
       <Filter>Arquivos de Cabeçalho\graphic</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

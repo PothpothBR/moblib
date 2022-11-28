@@ -33,7 +33,6 @@ public:
 	
 	MOB_SHEET(float width,float height,float cols,float rows) {
 
-
 		float w = cell_dimension.width = width / cols;
 		float h = cell_dimension.height = height / rows;
 		cell_count.width = cols, cell_count.height = rows;

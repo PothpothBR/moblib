@@ -1,0 +1,10 @@
+**/__pycache__
+src/**/__temp__*
+src/**/*.tmp
+src/**/*.cache
+src/**/*.log
+venv
+**.o
+x64/**
+**/Debug
+**/packages

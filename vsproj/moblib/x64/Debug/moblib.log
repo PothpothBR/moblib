@@ -1,2 +1,3 @@
 ﻿  main.cpp
-  moblib.vcxproj -> C:\Users\A62-LIV\Documents\GitHub\moblib\vsproj\x64\Debug\moblib.exe
+C:\Users\bruno\git_repo\moblib\moblib\lib\colision.h(268): warning C4715: 'mob_collision_mirror': nem todos os caminhos de controle retornam um valor
+  moblib.vcxproj -> C:\Users\bruno\git_repo\moblib\vsproj\x64\Debug\moblib.exe
